@@ -4,11 +4,13 @@ import java.util.Scanner;
 
 import com.mycompany.dvdstore.entity.Movie;
 import com.mycompany.dvdstore.service.MovieService;
+import com.mycompany.dvdstore.service.MovieServiceInterface;
 
 public class MovieController {
 
 	private static Scanner sc;
-	private static MovieService movieService = new MovieService();
+	//private static MovieService movieService = new MovieService();
+	private MovieServiceInterface movieService;
 
 	public void addUsingConsle() {
 		System.out.println("Saisisez le titre du film");
