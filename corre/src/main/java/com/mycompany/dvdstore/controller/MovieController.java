@@ -12,6 +12,14 @@ public class MovieController {
 	//private static MovieService movieService = new MovieService();
 	private MovieServiceInterface movieService;
 
+	public MovieServiceInterface getMovieService() {
+		return movieService;
+	}
+
+	public void setMovieService(MovieServiceInterface movieService) {
+		this.movieService = movieService;
+	}
+
 	public void addUsingConsle() {
 		System.out.println("Saisisez le titre du film");
 		sc = new Scanner(System.in);
