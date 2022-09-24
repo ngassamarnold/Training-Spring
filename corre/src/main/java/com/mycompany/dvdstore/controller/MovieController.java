@@ -3,7 +3,6 @@ package com.mycompany.dvdstore.controller;
 import java.util.Scanner;
 
 import com.mycompany.dvdstore.entity.Movie;
-import com.mycompany.dvdstore.service.MovieService;
 import com.mycompany.dvdstore.service.MovieServiceInterface;
 
 public class MovieController {

@@ -3,3 +3,6 @@ La grande vadrouille;Policier
 Text;Police
 f;ddr
 Test 237;Police
+Anaconda;POLICE
+Jocket;POLICE
+Vandam;Action
