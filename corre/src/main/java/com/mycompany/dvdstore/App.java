@@ -1,8 +1,9 @@
 package com.mycompany.dvdstore;
 
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
 import com.mycompany.dvdstore.controller.MovieController;
-import com.mycompany.dvdstore.repository.FileMovieRepository;
-import com.mycompany.dvdstore.service.DefaultMovieService;
 
 
 public class App 
@@ -10,13 +11,11 @@ public class App
 
 	public static void main( String[] args )
     {
-		MovieController movieController = new MovieController();
-		DefaultMovieService defaultMovieService=new DefaultMovieService();
-		FileMovieRepository movieRepository=new FileMovieRepository();
-		movieController.setMovieService(defaultMovieService);
-		defaultMovieService.setMovieRepositoryInterface(movieRepository);
-		movieController.addUsingConsle();
-       
+		ApplicationContext context= new ClassPathXmlApplicationContext("applicationContext.xml");
+
+		MovieController lController= context.getBean(MovieController.class);
+		
+		lController.addUsingConsle();       
     }
     
 }
