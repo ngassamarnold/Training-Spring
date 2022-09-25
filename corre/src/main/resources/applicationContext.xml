@@ -13,7 +13,9 @@
 	</bean>
 	
 	
-	<bean id="movieRepositoryInterface_" class="com.mycompany.dvdstore.repository.MemoryMovieRepository" />
+	<bean id="movieRepositoryInterface_" class="com.mycompany.dvdstore.repository.FileMovieRepository" >
+		<property name="file" value="movies.csv"/>
+	</bean>
 
 
 </beans>
