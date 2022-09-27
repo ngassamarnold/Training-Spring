@@ -6,19 +6,10 @@
 	   http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
        
     <context:annotation-config/>
+    <context:property-placeholder location="classpath:application.properties"/>
+    <context:component-scan base-package="com.mycompany.dvdstore.controller"/>
+    <context:component-scan base-package="com.mycompany.dvdstore.service"/>
+    <context:component-scan base-package="com.mycompany.dvdstore.repository.file"/>
     
-	<bean id="serviceDefaultMovie" class="com.mycompany.dvdstore.service.DefaultMovieService">
-		<!--property name="movieRepositoryInterface" ref="movieRepositoryInterface_" /-->
-	</bean>
-	
-	<bean class="com.mycompany.dvdstore.controller.MovieController">
-		<!--property name="movieService" ref="serviceDefaultMovie"/-->
-	</bean>
-	
-	
-	<bean id="movieRepositoryInterface_" class="com.mycompany.dvdstore.repository.FileMovieRepository" >
-		<property name="file" value="movies.csv"/>
-	</bean>
-
 
 </beans>

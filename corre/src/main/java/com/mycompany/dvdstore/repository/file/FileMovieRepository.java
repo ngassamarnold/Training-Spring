@@ -1,13 +1,18 @@
-package com.mycompany.dvdstore.repository;
+package com.mycompany.dvdstore.repository.file;
 
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
-import com.mycompany.dvdstore.entity.Movie;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Repository;
 
+import com.mycompany.dvdstore.entity.Movie;
+import com.mycompany.dvdstore.repository.MovieRepositoryInterface;
+
+@Repository
 public class FileMovieRepository implements MovieRepositoryInterface{
-	
+	@Value("${movie.file.location}")
 	private File file;
 	
 	public File getFile() {
