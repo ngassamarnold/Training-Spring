@@ -15,10 +15,14 @@ public class App
     {
 		//ApplicationContext context= new ClassPathXmlApplicationContext("applicationContext.xml");
 		//ApplicationContext context= new AnnotationConfigApplicationContext(App.class);
-		ApplicationContext context= SpringApplication.run(App.class);
+		ApplicationContext context= SpringApplication.run(App.class, args);
 		MovieController lController= context.getBean(MovieController.class);
 		
 		lController.addUsingConsle();       
     }
     
 }
+
+//run App ->  mvn spring-boot:run 
+//mvn-> clean install generate build
+//exc jar  -> java -jar core-0.0.1-SNAPSHOT.jar
