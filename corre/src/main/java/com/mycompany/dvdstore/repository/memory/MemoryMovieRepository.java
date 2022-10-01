@@ -20,4 +20,9 @@ public class MemoryMovieRepository implements MovieRepositoryInterface{
 
 	}
 
+	@Override
+	public List<Movie> list() {
+		return movies;
+	}
+
 }
